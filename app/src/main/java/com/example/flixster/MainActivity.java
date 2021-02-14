@@ -17,6 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.Headers;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
+        movies = new ArrayList<>();
+
         //create adapter
         MovieAdapter movieAdapter = new MovieAdapter(this, movies);
         //set the adapter on the recycler view
@@ -47,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
                         try{
                             JSONArray results = jsonObject.getJSONArray("results");
                             Log.i(TAG, results.toString());
-                            movies = Movie.parseJSON(results);
+                            movies.addAll(Movie.parseJSON(results));
+                            movieAdapter.notifyDataSetChanged();
                         } catch (JSONException e) {
                             Log.e(TAG, "Hit JSON exception", e);
                             e.printStackTrace();
