@@ -1,4 +1,4 @@
-package com.example.flixster_fix.models;
+package com.example.flixster.models;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,7 +13,7 @@ public class Movie {
     String overview;
 
     public Movie(JSONObject jsonObject) throws JSONException {
-        posterPath = jsonObject.getString("posterPath");
+        posterPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
     }

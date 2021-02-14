@@ -1,13 +1,17 @@
-package com.example.flixster_fix;
+package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
-import com.example.flixster_fix.models.Movie;
+import com.example.flixster.adapters.MovieAdapter;
+import com.example.flixster.models.Movie;
+import com.example.flixster_fix.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RecyclerView rvMovies = findViewById(R.id.rvMovies);
+        //create adapter
+        MovieAdapter movieAdapter = new MovieAdapter(this, movies);
+        //set the adapter on the recycler view
+        rvMovies.setAdapter(movieAdapter);
+        //set a layout manager
+        rvMovies.setLayoutManager(new LinearLayoutManager(this));
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(NOW_PLAYING_URL,
                 new JsonHttpResponseHandler() {
