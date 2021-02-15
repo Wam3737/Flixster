@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivposter"
+        android:layout_width="362dp"
+        android:layout_height="313dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="353dp"
+        tools:srcCompat="@tools:sample/avatars[3]" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="26dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        tools:text="Wonder Woman 1984" />
+
+    <TextView
+        android:id="@+id/tvSynopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignStart="@+id/tvTitle"
+        android:layout_alignEnd="@+id/tvTitle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="3dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="714dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ivposter"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider" />
+
+</RelativeLayout>
