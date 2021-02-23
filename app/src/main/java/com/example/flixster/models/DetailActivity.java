@@ -21,7 +21,7 @@ import java.util.List;
 import okhttp3.Headers;
 
 public class DetailActivity extends YouTubeBaseActivity {
-    private static final String googleAPI = "AIzaSyCADhB6mCvLxJXwA8T6lxS61Fws9qv3VdM";
+    private static final String googleAPI = "insert_private_key_here"; // private google api key redacted
    private static final String VID_URL = "https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
    private static final String GENRE_URL = "https://api.themoviedb.org/3/genre/movie/list?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US";
     YouTubePlayerView playerView;
