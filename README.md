@@ -19,7 +19,18 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 ### App Walkthough GIF
 [User Stories WalkThrough](https://i.imgur.com/0M2VZQF.mp4)<br>
 
-### Open-source libraries used
+## Flix Part 2
 
+### User Stories
+
+#### REQUIRED (10pts)
+
+- [X] (8pts) Expose details of movie (ratings using RatingBar and synopsis) in a separate activity.
+- [X] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+
+### App Walkthough GIF
+[User Stories WalkThrough](https://imgur.com/g8TWIA1.mp4)<br>
+
+## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Androids
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
